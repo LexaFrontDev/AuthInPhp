@@ -22,7 +22,7 @@ class Users extends FrontService
     #[Route(url: '/register', action: 'register')]
     public function register()
     {
-        if(!empty($_COOKIE['access_token']) || !empty($_SESSION['email'])) return $this->redirect('main'); 
+        if(!empty($_COOKIE['access_token']) || !empty($_SESSION['email'])) return $this->redirect('/'); 
         $this->render('Auth/register');
     }
 
@@ -31,7 +31,7 @@ class Users extends FrontService
     #[Route(url: '/login', action: 'login')]
     public function login()
     {
-        if(!empty($_COOKIE['access_token']) || !empty($_SESSION['email'])) return $this->redirect('main'); 
+        if(!empty($_COOKIE['access_token']) || !empty($_SESSION['email'])) return $this->redirect('/'); 
         $this->render('Auth/login');
     }
 

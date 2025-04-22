@@ -17,7 +17,7 @@ class Main extends FrontService{
 
 
 
-    #[Route(url: '/main', action: 'main')]
+    #[Route(url: '/', action: 'main')]
     public function main(): void
     {
         $data = $this->request->getBody(); 

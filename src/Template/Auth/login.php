@@ -66,7 +66,7 @@
                     if (data.success) {
                         alert('Успешный вход!');
                         setAuthCookies(data.data.access_token, data.data.refresh_token);
-                        window.location.href = '/main';
+                        window.location.href = '/';
                     } else {
                         alert('Ошибка входа: ' + data.message);
                     }
